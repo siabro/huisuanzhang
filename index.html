@@ -1,11 +1,793 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<body>
-		<div></div>
-		<div></div>
+		<div id="header">
+			<div class="forCenter_top">
+				<div class="topNav">
+					<div class="city">
+						<p>当前城市:厦门&nbsp;<span>[<a href="#">切换城市</a>]</span></p>
+					</div>
+					<div class="login">
+						<a href="#">企业版登录</a>
+						<span></span>
+						<a href="#">加盟商网点查询</a>
+						<a class="hotPhone">加盟热线 :010-625528</a>
+					</div>
+				</div>
+			</div>
+			<div class="forCenter_logo">
+				<div class="logo">
+					<img src="img/logo.png"/>
+					<img src="img/slogan_2.png"/>
+					<img src="img/slogan_3.png"/>
+					<p>咨询热线:400-017-2000</p>
+				</div>
+			</div>
+			<div class="forCenter_nav">
+				<div class="mainNav">
+					<div class="mainNav_left" onclick="menuFix()">
+						<p>全部服务分类</p>
+						<img src="img/nav_logo.png"/>
+					</div>
+					<ul class="mainBar">
+						<li class="barOpt" id="index"><a href="#1">首页</a></li>
+						<li class="barOpt"><a href="#">公司注册</a></li>
+						<li class="barOpt"><a href="#">代理记账</a></li>
+						<li class="barOpt"><a href="#">更多服务</a></li>
+						<li class="barOpt"><a href="#">财税咨询</a></li>
+						<li class="barOpt"><a href="#">加盟我们</a></li>
+						<li class="barOpt"><a href="#">关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="forCenter_banner">
+				<div class="banner">
+					<div class="leftSidebar_cont">
+						<ul class="leftSidebar">
+							<li class="barOption_1 barOption" onmouseover="show_second_menu1();replaceImg1()"
+								onmouseout="hidden_second_menu1();restoreImg1()">
+								<img src="img/second_menu_left1.png"/>
+								<img src="img/tapered_line.png"/>
+								<div class="cont">
+									<a href="#" class="content_title">开公司</a>
+									<p class="content cont_top">公司注册 公司变更</p>
+									<p class="content">公司核名 工商年检</p>
+								</div>
+							</li>
+							<li class="barOption_2 barOption" onmouseover="show_second_menu2();replaceImg2()"
+								onmouseout="hidden_second_menu2();restoreImg2()">
+								<img src="img/second_menu_left2.png"/>
+								<img src="img/tapered_line.png"/>
+								<div class="cont">
+									<a href="#" class="content_title">代理记账</a>
+									<p class="content cont_top">代理记账 财税代理</p>
+									<p class="content">财税顾问 汇算清缴</p>
+									
+								</div>
+							</li>
+							<li class="barOption_3 barOption" onmouseover="show_second_menu3();replaceImg3()"
+								onmouseout="hidden_second_menu3();restoreImg3()">
+								<img src="img/second_menu_left3.png"/>
+								<img src="img/tapered_line.png"/>
+								<div class="cont">
+									<a href="#" class="content_title">增值服务</a>
+									<p class="content cont_top">社保代缴 取公积金</p>
+									<p class="content">商标专利 企业信贷</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="second_menu1_1 second_menus">
+						<div class="second_menu1_title">
+							<span>企业工商服务</span>
+							<span class="color_1"></span>
+							<span>快人一步！即刻拥有自己的公司</span>
+						</div>
+						<ul class="second_menu1_list">
+							<li class="SM_list">
+								<span class="item">公司注册</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">公司股东及资金变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">工商换照</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">进出口贸易备案</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">地址变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">名称变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">经营范围变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">企业工商年检</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+						</ul>
+					</div>
+					<div class="second_menu1_2 second_menus">
+						<div class="second_menu1_title">
+							<span>企业工商服务</span>
+							<span class="color_1"></span>
+							<span>快人一步！即刻拥有自己的公司</span>
+						</div>
+						<ul class="second_menu1_list">
+							<li class="SM_list">
+								<span class="item">公司注册</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">公司股东及资金变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">工商换照</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">进出口贸易备案</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<!--<li class="SM_list">
+								<span class="item">地址变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">名称变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">经营范围变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">企业工商年检</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>-->
+						</ul>
+					</div>
+					<div class="second_menu1_3 second_menus">
+						<div class="second_menu1_title">
+							<span>企业工商服务</span>
+							<span class="color_1"></span>
+							<span>快人一步！即刻拥有自己的公司</span>
+						</div>
+						<ul class="second_menu1_list">
+							<li class="SM_list">
+								<span class="item">公司注册</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">公司股东及资金变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">工商换照</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">进出口贸易备案</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">地址变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">名称变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">经营范围变更</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+							<li class="SM_list">
+								<span class="item">企业工商年检</span>
+								<span class="more">详情咨询</span>
+								<img src="img/second_menu_list_bg.png" alt="" />
+							</li>
+						</ul>
+					</div>
+					<div class="banner_search">
+						<div class="banner_select">
+							<span>厦门</span>
+							<select class="banner_sel">
+								<option value="xiamen">厦门</option>
+								<option value="xiamen">福州</option>
+							</select>
+						</div>
+						<div class="banner_inp">
+							<input class="b_i" type="text" name="b_inp" value="请输入公司名称，例:北京公斤科技有限公司" 
+								onfocus="word_ctrl_on()" onblur="word_ctrl_out()"/>
+							<input type="submit" name="" value="免费查询是否注册" />	
+						</div>
+					</div>
+					<div class="rightSubscribe">
+						<div class="rightSubBanner">
+							<p>简单你的财税</p>
+							<p>一分钟立享服务</p>
+						</div>
+						<div class="subscribeForm">
+							<form action="http://www.baidu.com" method="post" target="_blank">
+								<div class="phone">
+									<input class="sSF_inp sSF_phone" type="text" name="phoneNumber" value="请输入你的手机号码" 
+										onfocus="phone_word_ctrl_on()" onblur="phone_word_ctrl_out()"/>	
+								</div>
+								<div class="nName">
+									<input class="sSF_inp sSF_name" type="text" name="nickName" value="例:王先生" 
+										onfocus="NN_word_ctrl_on()" onblur="NN_word_ctrl_out()"/>
+									<select class="sSF_sel" name="address">
+										<option value="xiamen">厦门</option>
+										<option value="fuzhou">福州</option>
+									</select>
+								</div>
+								<input class="sSF_sub" type="submit" value="免费预约"/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="forCenter_hs">
+				<div class="hotserve">
+					<div class="hotSever_title">热门服务</div>
+					<ul class="hotsever_list">
+						<li class="ht_list ht_list_1">
+							<p class="ht_item">注册免费核名</p>
+							<p class="ht_introduce">成功创业第一步</p>
+							<span class="ht_action">免费核名</span>
+						</li>
+						<li class="ht_list ht_list_2">
+							<p class="ht_item">代理记账</p>
+							<p class="ht_introduce">企业财税托管式套餐</p>
+							<span class="ht_action">咨询记账</span>
+						</li>
+						<li class="ht_list ht_list_3">
+							<p class="ht_item">公司注册+代账</p>
+							<p class="ht_introduce">创业首选热销套餐</p>
+							<span class="ht_action">我要申请</span>
+						</li>
+						<li class="ht_list ht_list_4">
+							<p class="ht_item">创业大礼包</p>
+							<p class="ht_introduce">注册+代账+社保等</p>
+							<span class="ht_action">咨询详情</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="forCenter_yp">
+				<div class="your_problem">
+					<div class="yp_top">
+						<div class="yp_line yp_line_left"></div>
+						<div class="yp_top_text" >您的公司是否遇到以下问题</div>
+						<div class="yp_line yp_line_right"></div>
+					</div>
+					<div class="yp_content">
+						<div class="yp_cont">
+							<ul class="yp_cont_ul">
+								<li class="yp_list yp_list_1">
+									<img src="img/problems_icon1.png"/>
+									<p class="yp_list_title">流程繁杂</p>
+									<p class="yp_list_explain">注册公司流程繁杂、材料多、<br />手续多，很麻烦</p>
+								</li>
+								<li class="yp_list">
+									<img src="img/problems_icon2.png"/>
+									<p class="yp_list_title">账目杂乱</p>
+									<p class="yp_list_explain">公司账目混乱、利润情况不清<br />晰，财务状况不明朗</p>
+								</li>
+								<li class="yp_list">
+									<img src="img/problems_icon3.png"/>
+									<p class="yp_list_title">成本过高</p>
+									<p class="yp_list_explain">聘请专业的会计团队，每年的<br />费用至少需要20万</p>
+								</li>
+								<li class="yp_list">
+									<img src="img/problems_icon4.png"/>
+									<p class="yp_list_title">不专业</p>
+									<p class="yp_list_explain">一般会计人员不具备财务规划<br />经验，引发大量隐患</p>
+								</li>
+								<li class="yp_list yp_list_5">
+									<img src="img/problems_icon5.png"/>
+									<p class="yp_list_title">效率低</p>
+									<p class="yp_list_explain">处理复杂账目时，效率低、准<br />确率低，缺乏合理化管理</p>
+								</li>
+							</ul>
+						</div>
+						<input type="button" name="" value="立刻帮我解决" />
+					</div>
+				</div>
+			</div>
+			<div class="forCenter_ad">
+				<div class="ourAdvantage">
+					<p class="ad_title">我们的优势</p>
+					<div class="ad_explain_cont">
+						<div class="ad_explain">18万企业的共同选择</div>
+					</div>
+					<div class="ad_list_cont">
+						<ul class="ad_list_ul">
+							<li class="ad_list">
+								<img src="img/benefit_content_icon1.png"/>
+								<p class="ad_list_1">价格透明</p>
+								<p class="ad_list_2">代理记账无隐形收费</p>
+							</li>
+							<li class="ad_list">
+								<img src="img/benefit_content_icon2.png"/>
+								<p class="ad_list_1">专业会计团队</p>
+								<p class="ad_list_2">随时尊享星级体验</p>
+							</li>
+							<li class="ad_list">
+								<img src="img/benefit_content_icon3.png"/>
+								<p class="ad_list_1">多元化增值服务</p>
+								<p class="ad_list_2">满足企业更多需求</p>
+							</li>
+							<li class="ad_list">
+								<img src="img/benefit_content_icon4.png"/>
+								<p class="ad_list_1">账目清晰准确</p>
+								<p class="ad_list_2">做账进度财务状况全掌控</p>
+							</li>
+							<li class="ad_list">
+								<img src="img/benefit_content_icon5.png"/>
+								<p class="ad_list_1">15年行业经验</p>
+								<p class="ad_list_2">覆盖城市180余家</p>
+							</li>
+							<li class="ad_list ad_list_5">
+								<img src="img/benefit_content_icon6.png"/>
+								<p class="ad_list_1">信息安全保密</p>
+								<p class="ad_list_2">让您省心放心还安心</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="forCenter_evaluate">
+				<div class="evaluate">
+					<div class="evaluate_top">
+						<div class="et_line et_line_left"></div>
+						<div class="et_top_text" >客户评价</div>
+						<div class="et_line et_line_right"></div>
+					</div>
+					<div class="evaluate_bottom">
+						<div class="ev_person_cont">
+							<div class="ev_person ev_person_1">
+								<img src="img/comment1.png"/>
+								<div class="person_text_cont">
+									<p class="person_title">
+										副总(CEO)<br />
+										重庆海纳物业管理有限公司
+									</p>
+									<div class="person_line"></div>
+									<p class="person_detail">
+										以前从未做过任何账务，每月只做申报，留下了财税隐患。机缘
+										巧合看到慧算账，便将自己公司两年的账目交于慧算账财税顾问
+										进行重新整理，并帮助我完成年报的报送。慧算账的服务既严谨
+										又专业，值得信赖！
+									</p>
+								</div>
+							</div>
+							<div class="ev_person ev_person_2">
+								<img src="img/comment1.png"/>
+								<div class="person_text_cont">
+									<p class="person_title">
+										副总(CEO)<br />
+										重庆海纳物业管理有限公司
+									</p>
+									<div class="person_line"></div>
+									<p class="person_detail">
+										以前从未做过任何账务，每月只做申报，留下了财税隐患。机缘
+										巧合看到慧算账，便将自己公司两年的账目交于慧算账财税顾问
+										进行重新整理，并帮助我完成年报的报送。慧算账的服务既严谨
+										又专业，值得信赖！
+									</p>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="evaluate_button_cont">
+							<div class="evaluate_button ev_left"></div>
+							<div class="evaluate_button ev_right"></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="forCenter_partner">
+				<div class="partner">
+					<div class="partner_top">
+						<div class="part_line part_line_left"></div>
+						<div class="part_top_text" >合作伙伴</div>
+						<div class="part_line part_line_right"></div>
+					</div>
+					<div class="partner_list_cont">
+						<ul class="partner_list">
+							<li class="pl_up pl">
+								<ul>
+									<li class="pl_item pl_item_left">
+										<img src="img/partner1.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner2.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner3.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner4.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner5.jpg"/>
+									</li>
+									<li class="pl_item pl_item_right">
+										<img src="img/partner6.jpg"/>
+									</li>
+								</ul>
+							</li>
+							<li class="pl_up pl">
+								<ul>
+									<li class="pl_item pl_item_left">
+										<img src="img/partner7.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner8.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner9.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner10.jpg"/>
+									</li>
+									<li class="pl_item">
+										<img src="img/partner11.jpg"/>
+									</li>
+									<li class="pl_item pl_item_right">
+										<img src="img/partner12.jpg"/>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="forCenter_news">
+				<div class="news">
+					<div class="news_cont">
+						<div class="news_cont_title">
+							<div class="nc_title_h"><a href="#">财税咨询</a></div>
+							<div class="nc_title_line"><a href="#">查看更多&gt;</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="news_cont_list">
+							<ul class="news_content">
+								<li class="nc_list">
+									<a href="#">税务全国通办，税务惠民再上新高度</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">车辆购置税成法律，10%车辆购置税税率成定线</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">国庆加班族注意！这些收入需要缴纳个税</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">信用积分|纳税人信用积分将成助攻小帮手</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">“双11”快递大风暴即将来袭，物流税金早准备！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">2018年初，工商税务变更还未完成？后果自负！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">不想被税务局拜访？这些财税该注意点必须知道！</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="news_cont">
+						<div class="news_cont_title">
+							<div class="nc_title_h"><a href="#">财税咨询</a></div>
+							<div class="nc_title_line"><a href="#">查看更多&gt;</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="news_cont_list">
+							<ul class="news_content">
+								<li class="nc_list">
+									<a href="#">税务全国通办，税务惠民再上新高度</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">车辆购置税成法律，10%车辆购置税税率成定线</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">国庆加班族注意！这些收入需要缴纳个税</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">信用积分|纳税人信用积分将成助攻小帮手</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">“双11”快递大风暴即将来袭，物流税金早准备！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">2018年初，工商税务变更还未完成？后果自负！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">不想被税务局拜访？这些财税该注意点必须知道！</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="news_cont news_cont_right">
+						<div class="news_cont_title">
+							<div class="nc_title_h"><a href="#">财税咨询</a></div>
+							<div class="nc_title_line"><a href="#">查看更多&gt;</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="news_cont_list">
+							<ul class="news_content">
+								<li class="nc_list">
+									<a href="#">税务全国通办，税务惠民再上新高度</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">车辆购置税成法律，10%车辆购置税税率成定线</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">国庆加班族注意！这些收入需要缴纳个税</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">信用积分|纳税人信用积分将成助攻小帮手</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">“双11”快递大风暴即将来袭，物流税金早准备！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">2018年初，工商税务变更还未完成？后果自负！</a>
+								</li>
+								<li class="nc_list">
+									<a href="#">不想被税务局拜访？这些财税该注意点必须知道！</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="forCenter_advert">
+				<div class="advert_cont">
+					<ul class="advert_cont_ul">
+						<li class="ac_list ac_list_1">
+							<img src="img/advantage11.png"/>
+							<div class="ac_text">
+								<p class="ac_text_up">品质保证</p>
+								<p class="ac_text_down">
+									15年以上财税经验积累<br />国内首家IDG投资互联网财税企业
+								</p>
+							</div>
+							<img class="ac_list_line" src="img/advantage_line.png"/>
+						</li>
+						<li class="ac_list ac_list_2">
+							<img src="img/advantage12.png"/>
+							<div class="ac_text">
+								<p class="ac_text_up">专业实力</p>
+								<p class="ac_text_down">
+									资深财税团队<br />专业会计团队
+								</p>
+							</div>
+							<img class="ac_list_line" src="img/advantage_line.png"/>
+						</li>
+						<li class="ac_list ac_list_3">
+							<img src="img/advantage13.png"/>
+							<div class="ac_text">
+								<p class="ac_text_up">安全无忧</p>
+								<p class="ac_text_down">
+									2048位顶级证书<br />银行级别的安全
+								</p>
+							</div>
+							<img class="ac_list_line" src="img/advantage_line.png"/>
+						</li>
+						<li class="ac_list ac_list_4">
+							<img src="img/advantage14.png"/>
+							<div class="ac_text">
+								<p class="ac_text_up">多元服务</p>
+								<p class="ac_text_down">
+									社保托管、税务代办<br />财务规划和咨询等增值服务
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="forCenter_siteinfo">
+				<div class="siteinfo">
+					<div class="web_links">
+						<ul>
+							<li class="about_us">
+								<ul>
+									<li class="au_title"><p>关于我们</p></li>
+									<li class="au_links"><a href="#">关于慧算账</a></li>
+									<li class="au_links"><a href="#">联系我们</a></li>
+									<li class="au_links"><a href="#">招商加盟</a></li>
+									<li class="au_links"><a href="#">网站地图</a></li>
+								</ul>
+							</li>
+							<li class="about_us">
+								<ul>
+									<li class="au_title"><p>财税服务</p></li>
+									<li class="au_links"><a href="#">代理记账</a></li>
+									<li class="au_links"><a href="#">公司注册</a></li>
+									<li class="au_links"><a href="#">增值服务</a></li>
+								</ul>
+							</li>
+							<li class="about_us">
+								<ul>
+									<li class="au_title"><p>财税资讯</p></li>
+									<li class="au_links"><a href="#">公司动态</a></li>
+									<li class="au_links"><a href="#">财税解答</a></li>
+									<li class="au_links"><a href="#">代理记账</a></li>
+									<li class="au_links"><a href="#">财税资讯</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="QR_code">
+						<ul>
+							<li class="QR_li">
+								<ul>
+									<li class="QR_title"><p>下载慧算账 APP</p></li>
+									<li class="QR_links"><p>您的专属财务管家</p></li>
+									<li class="QR_links">
+										<img src="img/advantage_app2.png" alt="" />
+									</li>
+								</ul>
+							</li>
+							<li class="QR_li">
+								<ul>
+									<li class="QR_title"><p>关注公众号</p></li>
+									<li class="QR_links"><p>财税热点优惠政策全覆盖</p></li>
+									<li class="QR_links">
+										<img src="img/advantage_gzh2.png" alt="" />
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="callUs">
+						<ul class="callUs_ul">
+							<li class="callUs_li">
+								<img src="img/siteinfo_customer.png"/>
+								<div class="callUs_li_text">
+									<p class="callUs_tel">400-017-2000</p>
+									<p class="callUs_explain">全国咨询热线</p>	
+								</div>
+							</li>
+							<li class="callUs_li">
+								<img src="img/siteinfo_jm_phone.jpg"/>
+								<div class="callUs_li_text">
+									<p class="callUs_tel">010-62155288</p>
+									<p class="callUs_explain">全国加盟热线</p>	
+								</div>
+							</li>
+							<li class="callUs_li">
+								<img src="img/siteinfo_intime.png"/>
+								<div class="callUs_li_text">
+									<p class="callUs_tel">9:00-18:00</p>
+									<p class="callUs_explain">即时服务</p>	
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyRight">
+				<p>京ICP备15028350号丨Copyright©2013-2017 北京公瑾科技有限公司</p>
+			</div>
+		</div>
+		<div class="floating_window">
+			<ul>
+				<li>
+					<div class="fw_li fw_li_1" >
+						<img class="fw_li_img" src="img/floating_window_consult.png"/>
+						<p>售前咨询</p>	
+					</div>
+					<div class="fw_hidden fw_hidden_1">
+						<div class="fw_h fw_h_1">
+							<p class="fw_title">财税顾问：售前</p>
+							<p class="fw_explain">专业顾问，免费咨询</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="fw_li fw_li_2">
+						<img class="fw_li_img" src="img/floating_window_jiameng.png"/>
+						<p>售后咨询</p>
+					</div>
+					<div class="fw_hidden fw_hidden_2">
+						<div class="fw_h fw_h_2">
+							<p class="fw_title">财税顾问：售后</p>
+							<p class="fw_explain">工具咨询，投诉建议</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="fw_li fw_li_3">
+						<img class="fw_li_img" src="img/floating_window_message.png" />
+						<p>加盟咨询</p>
+					</div>
+					<div class="fw_hidden fw_hidden_3">
+						<div class="fw_h fw_h_3">
+							<p class="fw_title">财税顾问：加盟</p>
+							<p class="fw_explain">专业顾问，免费咨询</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="fw_li fw_li_4">
+						<img class="fw_li_img" src="img/floating_window_tel.png" />
+						<p>免费电话</p>
+					</div>
+					<div class="fw_hidden fw_hidden_4">
+						<div class="fw_h fw_h_4">
+							<p class="fw_title">财税顾问：售前</p>
+							<p class="fw_explain">专业顾问，免费咨询</p>
+						</div>
+					</div>
+				</li>
+				<li class="fw_li fw_li_5">
+					<a href="javascript:window.scrollTo(0,0);">
+						<img class="fw_li_img fw_li_img_5" src="img/floating_window_rtop.png"/>
+						<p>回到顶部</p>
+					</a>
+				</li>
+			</ul>
+			<div class="leave_word">
+				<span class="lw_img">
+					<span class="lw_img_cont"></span>
+				</span>
+				<span class="lw_word">如需帮助，请您留言</span>
+				<div class="clear"></div>
+			</div>
+		</div>
 	</body>
+<script src="js/normal.js"></script>
 </html>
